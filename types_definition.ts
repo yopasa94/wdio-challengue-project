@@ -1,0 +1,2 @@
+export type WebElement = WebdriverIO.Client<WebdriverIO.RawResult<WebdriverIO.Element>> & WebdriverIO.RawResult<WebdriverIO.Element> | WebdriverIO.Client<WebdriverIO.RawResult<WebdriverIO.Element>>;
+export type WebElements = WebdriverIO.Client<WebdriverIO.RawResult<WebdriverIO.Element>>[] & WebdriverIO.RawResult<WebdriverIO.Element>[] | WebdriverIO.Client<WebdriverIO.RawResult<WebdriverIO.Element>>[];
