@@ -1,0 +1,35 @@
+{
+  "name": "webdriverio_skeleton",
+  "version": "1.0.0",
+  "description": "Skeleton of test framework which uses WebdriverIO v4 and TypeScript",
+  "main": "index.ts",
+  "scripts": {
+    "wdio": "./node_modules/.bin/wdio wdio.conf.js",
+    "test": "wdio",
+    "test-suite": "wdio --suite",
+    "test-spec": "wdio --spec"
+  },
+  "keywords": [
+    "WebdriverIO",
+    "Selenium",
+    "Cucumber",
+    "TypeScript"
+  ],
+  "author": "dariaszmajduch",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/chai": "^4.2.12",
+    "@types/cucumber": "^4.0.7",
+    "@types/node": "^14.6.2",
+    "@types/webdriverio": "^4.13.3",
+    "chai": "^4.2.0",
+    "ts-node": "^9.0.0",
+    "tsconfig-paths": "^3.9.0",
+    "typescript": "^4.0.2",
+    "wdio-cucumber-framework": "^2.2.8",
+    "wdio-junit-reporter": "^0.4.4",
+    "wdio-selenium-standalone-service": "0.0.12",
+    "wdio-spec-reporter": "^0.1.5",
+    "webdriverio": "^4.14.4"
+  }
+}

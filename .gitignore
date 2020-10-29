@@ -1,0 +1,6 @@
+/node_modules/
+/errorShots/*.png
+/reports/*.xml
+/.idea/
+/.vscode/
+.DS_Store
