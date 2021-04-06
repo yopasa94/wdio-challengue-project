@@ -16,14 +16,16 @@
       "test/*": ["./test/*"]
     },
     "types": [
-      "webdriverio",
+      "webdriverio/sync",
+      "expect-webdriverio",
       "node",
-      "cucumber"
+      "@wdio/cucumber-framework"
     ]
   },
   "include": [
     "./test/**/*.ts",
-    "./config/**/*.ts"
+    "./config/**/*.ts",
+    "node_modules/webdriverio/async.d.ts"
   ],
   "exclude": [
     "./node_modules"

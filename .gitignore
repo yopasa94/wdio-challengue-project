@@ -1,6 +1,7 @@
-/node_modules/
-/errorShots/*.png
-/reports/*.xml
 /.idea/
 /.vscode/
+/config/local.conf.ts
+/errorShots/*.png
+/node_modules/
 .DS_Store
+/reports/*.xml
