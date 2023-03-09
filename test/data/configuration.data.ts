@@ -1,11 +1,9 @@
 interface IEnvironmentUrls {
   development: string;
-  production: string;
 }
 
 const PAGE_URLS: IEnvironmentUrls = {
-  development: 'http://dev.address.com/',
-  production: 'http://prod.address.com/'
+  development: 'https://www.mall.cz/',
 };
 
 export default {

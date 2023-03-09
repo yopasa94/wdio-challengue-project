@@ -1,44 +1,23 @@
-const suites = require('./config/test_suites.conf');
-
-const runEnv = process.env.RUN_ENV || 'debug';
+const runEnv = 'debug';
 
 let capabilities = [
-  {
-    browserName: 'chrome',
-    'goog:chromeOptions': {
-      args: ['--headless', '--disable-gpu', 'window-size=2560,1600', '--no-sandbox', '--disable-dev-shm-usage', '--autoplay-policy=no-user-gesture-required'],
-    },
-    maxInstances: runEnv === 'remote' ? 4 : 1,
-  },
-];
-
-if (runEnv === 'debug') {
-  capabilities = [
     {
       browserName: 'chrome',
       'goog:chromeOptions': {
-        args: ['window-size=2560,1600', '--autoplay-policy=no-user-gesture-required'],
+        args: ['window-size=2560,1600'],
       },
       maxInstances: 1,
     },
   ];
-}
 
 const DEBUG_RUN_ENV = {
-  hostName: '',
+  hostName: 'localhost',
   portNumber: 4444,
-  servicesList: ['selenium-standalone']
-};
-
-const REMOTE_RUN_ENV = {
-  hostName: 'seleniumserver.address.com',
-  portNumber: 1234,
-  servicesList: []
+  servicesList: ['chromedriver']
 };
 
 const RUN_ENVS = {
   debug: DEBUG_RUN_ENV,
-  remote: REMOTE_RUN_ENV,
 };
 
 exports.config = {
@@ -49,8 +28,6 @@ exports.config = {
 
   specs: ['./test/features/*.feature'],
   exclude: [],
-
-  suites: suites.testSuites,
 
   capabilities: capabilities,
 
@@ -66,7 +43,6 @@ exports.config = {
   ],
 
   bail: 0,
-  baseUrl: 'http://localhost',
   waitforTimeout: 10000,
   connectionRetryTimeout: 90000,
   connectionRetryCount: 3,

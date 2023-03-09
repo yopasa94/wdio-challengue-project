@@ -3,10 +3,6 @@ import { WebElement } from 'types_definition';
 import { expect } from 'chai';
 
 export default abstract class Page {
-  protected getEnvironment(): string {
-    return process.env.ENV || ENVIRONMENT.production;
-  }
-
   protected pageIsLoaded(element: WebElement, timeout: number = 10000, timeoutMsg: string = ''): void {
     browser.waitUntil(() => (element.isExisting()), { timeout: timeout, timeoutMsg: timeoutMsg });
   }
