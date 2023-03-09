@@ -10,6 +10,7 @@ When(/^user scroll down to carousels$/, () => {
 });
 
 Then(/^I should see only '(.+)' element per category$/, (numElements: number) => {
-  console.log(homePage.categoriesList.length);
+  expect(homePage.categoriesList).toBeGreaterThan(0)
   homePage.categoriesList.forEach((list)=>(expect(list).toHaveLength(numElements)));
+  
 });
